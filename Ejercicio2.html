@@ -7,33 +7,36 @@
     <link rel="icon" href="./img/icon.svg">
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Cálculo de Porcentaje</title>
+    <title>Cálculo de Perímetro y Díametro</title>
 </head>
 <body>
     <header class="container">
-        <h1>Curso Práctico de JavaScript</h1>
-        <p> Despliegar tus proyectos a internet con GitHub Pages. <br>
-            Implementar un flujo de desarrollo web profesional. <br>
-            Conectar JavaScript con HTML. <br>
-            Operaciones matemáticas básicas con JavaScript.</p>
+        <h1>Cálculo de Descuentos</h1>
+        <p>Segundo ejercicio practico del curso de JavaScript</p>
     </header>
 
-    <main class="cuerpo">
+    <main class="cuerpo-descuento">
         <section class="container">
-            <h2><a href="Ejercicio1.html">Ejercicio 1</a></h2>
-            <br>
-            <p>Cálculo de figuras geométricas</p>
+            <img src="./img/cuadrado.png" alt="">
+    
+            <form action="" >
+                <div class="container-two">
+                    <label for="precio">Precio del producto: </label>
+                    <input type="number" name="" id="precio" placeholder="Precio">
+                    <label for="descuento">Descuento: </label>
+                    <input type="number" name="" id="descuento" placeholder="Psrecio con Descuento">
+                </div>
+                <div>
+                    <button type="button" onclick="calcularDescuento()">Calcular Descuento</button>
+                </div>
+                <br>
+                <div class="container-two">
+                    <p>Valor con Descuento: </p>
+                    <p class="resultado"></p>
+                </div>
+            </form>
         </section>
 
-        <section class="circulo  container">
-            <h2><a href="Ejercicio2.html">Ejercicio 2</a></h2>
-            <br>
-            <p>Cálculo de Descuentos</p>
-        </section>
-
-        <section class="triangulo container">
-            <h2><a href="Ejercicio3.html">Ejercicio 3</a></h2>
-        </section>
     </main>
 
     <footer>

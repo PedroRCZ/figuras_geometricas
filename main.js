@@ -97,3 +97,20 @@ function imprimirValorTriangulo(valor){
     let resultado = document.querySelector(".resultado-triangulo");
     resultado.textContent = valor
 }
+
+// < - - - Ejercicio 2 - - - >
+
+function descuentoF(precio, descuento){
+    const valorDescuento = 100 - descuento;
+    const precioFinal = (precio * valorDescuento) / 100;
+    return precioFinal;
+}
+
+function calcularDescuento(){
+    const precio = parseInt(document.getElementById("precio").value);
+    const descuento = parseInt(document.getElementById("descuento").value);
+    const valor = descuentoF(precio, descuento);
+    let resultado = document.querySelector(".resultado");
+    resultado.textContent = valor
+}
+
