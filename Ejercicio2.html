@@ -15,11 +15,9 @@
         <p>Segundo ejercicio practico del curso de JavaScript</p>
     </header>
 
-    <main class="cuerpo-descuento">
+    <main class="container-two">
         <section class="container">
-            <img src="./img/cuadrado.png" alt="">
-    
-            <form action="" >
+           <form action="" >
                 <div class="container-two">
                     <label for="precio">Precio del producto: </label>
                     <input type="number" name="" id="precio" placeholder="Precio">
@@ -33,6 +31,21 @@
                 <div class="container-two">
                     <p>Valor con Descuento: </p>
                     <p class="resultado"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="container">
+            <h2>Tienes un cupón??</h2>
+            <form action="" >
+                <br>
+                <input type="text" name="" id="cupon" placeholder="Precio">    
+                <br>
+                <button type="button" onclick="calcularDescuentoCupon()">Aplicar cupón</button>  
+                <br>
+                <div class="container-two">
+                    <p>Valor con Descuento y cupón: </p>
+                    <p class="resultado-final"></p>
                 </div>
             </form>
         </section>

@@ -114,3 +114,31 @@ function calcularDescuento(){
     resultado.textContent = valor
 }
 
+function calcularDescuentoCupon(){
+    const resulta = parseInt(document.querySelector(".resultado").innerHTML);
+    const cuponValue = document.getElementById("cupon").value;
+    const user = coupons.find(cupon => cupon.name === cuponValue);
+    if(user){
+        const valor = descuentoF(resulta, user.discount)
+        let resultado = document.querySelector(".resultado-final");
+        resultado.textContent = valor
+    }else{
+        alert("cupón inválido")
+    }
+
+}
+
+const coupons = [
+    {
+        name: "JuanDC_es_Batman",
+        discount: 15,
+    },
+    {
+        name: "pero_no_le_digas_a_nadie",
+        discount: 30,
+    },
+    {
+        name: "es_un_secreto",
+        discount: 25,
+    },
+];
