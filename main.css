@@ -3,9 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #e0e0e0;
     text-align: center;
-    background: #1b1b1b;;
 }
 
 ::-webkit-scrollbar {
@@ -29,11 +27,19 @@
     background-color: #999999;
 }
 
+a{
+    text-decoration: none;
+}
+
 .container{
     border-radius: 2em;
     margin: 15px 20px;
-    padding: 30px;
-    box-shadow: 0.5em 0.5em 2em #2b2b2b, -0.5em -0.5em 2em #353535, inset 0 0 0 #1b1b1b, inset 0 0 0 #353535;
+    padding: 15px;
+    border: 2px solid #1b2127;
+}
+
+.cuerpo .container:hover{
+    border: 2px solid #fa7921;
 }
 
 .container h1{
@@ -105,7 +111,10 @@ input{
     align-items: center;
 }
 
-
+.footer-container{
+    background-color: #1b2127;
+    color: #fff;
+}
 
 /* Foter -- Portafolio */
 
@@ -118,6 +127,14 @@ input{
     align-items: inherit;
     height: inherit;
     flex-wrap: inherit;
+}
+
+.web{
+    color: #fa7921;
+}
+
+.web:hover{
+    color: #1d20d6;
 }
 
 .social-link{
@@ -161,4 +178,23 @@ input{
 .corazon {
 	font-size: 150px;
 	animation: latidos 1s infinite;
+}
+
+footer{
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 1339px){
+    footer{
+        position: inherit;
+    }
+}
+
+@media (max-width: 425px){
+    .cuerpo{
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
 }

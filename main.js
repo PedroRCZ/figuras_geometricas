@@ -123,7 +123,7 @@ function calcularDescuentoCupon(){
         let resultado = document.querySelector(".resultado-final");
         resultado.textContent = valor
     }else{
-        alert("cupón inválido")
+        alert(cuponValue + " es cupón inválido")
     }
 
 }
@@ -142,3 +142,59 @@ const coupons = [
         discount: 25,
     },
 ];
+
+// < - - - Ejercicio 3 - - - >
+
+const lista = [
+    1100,2100,300,300,500, 12
+];
+
+function calcularPromedio(lista){
+    const sumaLista = lista.reduce(
+        function(valorAcumulado = 0, elemento){
+            return valorAcumulado + elemento;
+        }
+    );
+    return sumaLista
+}
+
+function calcularMedia(lista){
+    lista.sort(function(a,b){
+        return a - b
+    })
+    if(esPar(lista.length)){
+        let mitad1 = parseInt(lista.length / 2)
+        let mitad2 = parseInt(lista.length / 2) + 1
+        return calcularPromedio([lista[mitad1], lista[mitad2]])
+    }else{
+        let mitad = parseInt(lista.length / 2)
+        return lista[mitad]
+    }
+}
+
+function esPar(num){
+    return (num % 2 === 0);
+}
+
+function calcularModa(lista){
+    const lista1Count = {};
+    
+    lista.map(
+    function (elemento) {
+        if (lista1Count[elemento]) {
+            lista1Count[elemento] += 1;
+        } else {
+            lista1Count[elemento] = 1;
+        }
+    }
+    );
+    
+    const lista1Array = Object.entries(lista1Count).sort(
+        function (elementoA, elementoB) {
+            return elementoA[1] - elementoB[1];
+        }
+    );
+    
+    const moda = lista1Array[lista1Array.length - 1];
+    console.log(moda) 
+}
